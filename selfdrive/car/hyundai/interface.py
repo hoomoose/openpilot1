@@ -60,6 +60,7 @@ class CarInterface(CarInterfaceBase):
             ret.flags |= HyundaiFlags.CANFD_ALT_GEARS.value
         if candidate not in CANFD_RADAR_SCC_CAR:
           ret.flags |= HyundaiFlags.CANFD_CAMERA_SCC.value
+          ret.radarUnavailable = False
     else:
       # TODO: detect EV and hybrid
       if candidate in HYBRID_CAR:
